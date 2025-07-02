@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0F0F0F;
+    color: #ECECEC;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #F8B400;
+}
+
+a:hover {
+    color: #00FFF5;
+}
+
+/* Navbar */
+header {
+    background: #1A1A1A;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 50px rgba(0,0,0,0.7);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00FFF5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #ECECEC;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00FFF5;
+}
+
+/* Hamburger Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ECECEC;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Sections */
+section {
+    padding: 100px 0;
+}
+
+.container h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-section h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.home-section span {
+    color: #00FFF5;
+}
+
+.home-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-outline {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 2px solid #00FFF5;
+    color: #00FFF5;
+}
+
+.btn-outline:hover {
+    background: #00FFF5;
+    color: black;
+}
+
+#about .container p{
+    font-size: 18px;
+}
+
+/* Skills */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skills-grid div {
+    background: #1A1A1A;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,255,245,0.1);
+    transition: transform 0.3s;
+}
+
+.skills-grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,255,245,0.3);
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1A1A1A;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,255,245,0.3);
+}
+
+/* Footer */
+footer {
+    background: #1A1A1A;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 65px;
+        background: #1A1A1A;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 15px 0;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
